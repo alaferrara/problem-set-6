@@ -11,7 +11,10 @@
  */
 
 function sayHello() {
-
+  const canvas = document.getElementById('canvas1');
+  const ctx = canvas.getContext('2d');
+  ctx.font = '48px sans-serif';
+  ctx.strokeText('Hello, World!', 10, 50);
 }
 
 /*
@@ -38,6 +41,9 @@ function sayHello() {
  */
 
 function drawRectangle() {
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
 
 }
 
