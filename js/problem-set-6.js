@@ -89,7 +89,7 @@ context.clearRect(0, 0, canvas3.width, canvas3.height);
 
 let color;
 while(true){
-color = prompt('Please enter one of these colors: black, blue, green, orange, purple, red, or yellow.');
+color = prompt('Enter a color.');
 if(color=="black" || color=="blue" || color=="green" || color=="orange" || color=="purple" || color=="red" || color=="yellow") {
   break;
 } else {
