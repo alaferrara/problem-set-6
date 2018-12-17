@@ -349,7 +349,7 @@ function drawPyramid() {
  let canvas = document.getElementById('canvas8');
  let ctx = canvas.getContext('2d');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
- let sideLength=Number(prompt("enter a side length"));
+ let sideLength=Number(prompt("Enter the length of a side."));
  let x=10;
  let y=canvas.height-10;
  let i=0;
@@ -404,8 +404,8 @@ let canvas = document.getElementById('canvas9');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
 
  while(true){
- doorColor=prompt("Enter a color for the Door");
- houseColor=prompt("Enter a color for the House");
+ doorColor=prompt("Enter a color for the door");
+ houseColor=prompt("Enter a color for the house");
  if((doorColor=="brown" || doorColor=="blue" || doorColor=="green" || doorColor=="orange" || doorColor=="purple" || doorColor=="red" || doorColor=="yellow")
  && (houseColor=="brown" || houseColor=="blue" || houseColor=="green" || houseColor=="orange" || houseColor=="purple" || houseColor=="red" || houseColor=="yellow")) {
    break;
