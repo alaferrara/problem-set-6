@@ -320,6 +320,7 @@ function drawStopSign() {
  ctx.closePath();
  ctx.beginPath();
  ctx.textAlign="center";
+ ctx.font="56px Georgia";
  ctx.fillStyle="white";
  ctx.fillText("STOP", center[0], center[1]+15);
  ctx.closePath()
