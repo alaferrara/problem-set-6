@@ -435,4 +435,4 @@ ctx.fillRect(526,y+100, 50, 50);
 ctx.fillRect(300,y+200, 50, 50);
 ctx.fillRect(526,y+200, 50, 50);
 ctx.closePath();
-}
+} 
