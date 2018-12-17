@@ -83,22 +83,22 @@ let canvas = document.getElementById('canvas2');
  */
 
 function drawColoredRectangle() {
- let rectangleColor = document.getElementById('canvas3');
-let context = rectangleColor.getContext('2d');
-context.clearRect(0, 0, canvas3.width, canvas3.height);
+  let canvas = document.getElementById("canvas3");
+  let context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
 
-let color;
-while(true){
-color = prompt("Enter a color.");
-if(color=="black" || color=="blue" || color=="green" || color=="orange" || color=="purple" || color=="red" || color=="yellow") {
-  break;
-} else {
-  window.alert(`${color} is not a supported color`);
-  break;
-}
-}
-context.fillStyle = color;
-context.fillRect(10, 10, 100, 50);
+  let color;
+  while(true){
+    color=prompt("Enter a color")
+    if(color=="black" || color=="blue" || color=="green" || color=="orange" || color=="purple" || color=="red" || color=="yellow") {
+      break;
+    }else{
+		alert("That is an unsupported color")
+	}
+  }
+  context.fillStyle=color;
+  context.fillRect(10,10,100,50);
+
 }
 
 /*
