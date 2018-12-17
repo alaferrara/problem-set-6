@@ -86,6 +86,7 @@ function drawColoredRectangle() {
  let canvas = document.getElementById("canvas3");
  let context = canvas.getContext("2d");
  context.clearRect(0, 0, canvas.width, canvas.height);
+	
  let color;
  while(true){
    color=prompt("Please Enter a Valid Color")
@@ -95,8 +96,8 @@ function drawColoredRectangle() {
  }
  context.fillStyle=color;
  context.fillRect(10,10,100,50);
+	
 }
-
 
 /*
  * Triangle. 5 points.
@@ -128,7 +129,7 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
-let x=10;
+  let x=10;
   let y=10;
   let a;
   let b;
@@ -163,6 +164,7 @@ let x=10;
  context.stroke();
 }
 
+
 /*
  * Smile. 7 points.
  *
@@ -183,7 +185,6 @@ let x=10;
  */
 
 function drawSmileyFace() {
-
  let radius;
  let canvas = document.getElementById('canvas5');
  let ctx = canvas.getContext('2d');
@@ -290,7 +291,6 @@ function drawStar() {
  */
 
 function drawStopSign() {
-
  let canvas = document.getElementById('canvas7');
  let ctx = canvas.getContext('2d');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -300,8 +300,6 @@ function drawStopSign() {
  let points=8;
  let pointx=[];
  let pointy=[];
-
-
 
  for(let i=0;i<points;i++){
    pointx.push(Math.cos(((Math.PI*2*i)/points)-Math.PI/8)*100+center[0]);
@@ -314,8 +312,6 @@ function drawStopSign() {
  }
  ctx.lineTo(pointx[0], pointy[0]);
  ctx.stroke();
-
-
 
  ctx.fillStyle="red";
  ctx.fill();
@@ -367,8 +363,6 @@ function drawPyramid() {
    i++;
  }
 
-
-
 }
 
 /*
@@ -406,6 +400,7 @@ function drawHouse() {
 let canvas = document.getElementById('canvas9');
  let ctx = canvas.getContext('2d');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
  while(true){
  doorColor=prompt("Enter a color for the Door");
  houseColor=prompt("Enter a color for the House");
