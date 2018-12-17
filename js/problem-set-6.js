@@ -128,33 +128,39 @@ function drawColoredRectangle() {
  */
 
 function drawTriangle() {
-let canvas = document.getElementById("canvas4")
-let triangle = canvas.getContext("2d");
-let side1 = Number(prompt("Please enter a positive integer for your left side length."));
-let side2 = Number(prompt("Please enter a positive integer for your bottom side length."));
-let side3 = Number(prompt("Please enter a positive integer for your hypotenuse length."));
-let x = 10
-let y = 10;
-triangle.clearRect(0, 0, canvas4.width, canvas4.height);
-while(true){
-if(((side1 ** 2) + (side2 ** 2) == (side3 ** 2)) && side1 > 0 && side2 > 0 && side3 > 0 && canvas.width - x - side1 >= 0 && canvas.height - y - side2 >= 0){
- break;
-}else{
- alert("That is not a valid right triangle.");
-}
-}
-triangle.beginPath();
-triangle.moveTo(x,y);
-triangle.lineTo(x, y + side1);
-triangle.stroke();
-triangle.beginPath();
-triangle.moveTo(x,y + side1);
-triangle.lineTo(x + side2, y + side1);
-triangle.stroke();
-triangle.beginPath();
-triangle.moveTo(x,y);
-triangle.lineTo(x + side2, y + side1);
-triangle.stroke();
+let x=10;
+  let y=10;
+  let a;
+  let b;
+  let c;
+  let canvas = document.getElementById("canvas4");
+  let context = canvas.getContext("2d");
+  context.clearRect(0, 0, canvas.width, canvas.height);
+  while(true){
+	a=Number(prompt("Enter side 1 length"));
+	b=Number(prompt("Enter side 2 length"));
+	c=Number(prompt("Enter hypotenuse length"));
+	if(((a**2) + (b**2) == (c**2)) && a>0 && b>0 && c>0 && canvas.width-x-a>=0 && canvas.height-y-b>=0){
+		break;
+	}else{
+		alert("That is not a valid triangle")
+	}
+  }
+ //Line A
+ context.beginPath(); //Begins a path
+ context.moveTo(x,y); //Choses the starting point
+ context.lineTo(x,y+a); //Line A coordinates: It is a vertical line, therefore the same x value but different y-value
+ context.stroke(); //Draws the line
+ //Line B
+ context.beginPath();
+ context.moveTo(x,y+a);
+ context.lineTo(x+b,y+a);
+ context.stroke();
+ //Hypotenuse
+ context.beginPath();
+ context.moveTo(x,y);
+ context.lineTo(x+b,y+a);
+ context.stroke();
 }
 
 /*
