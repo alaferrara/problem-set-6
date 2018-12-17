@@ -45,10 +45,10 @@ let canvas = document.getElementById('canvas2');
   let ctx = canvas.getContext('2d');
   ctx.clearRect(0, 0, canvas.width, canvas.height)
   while(true){
-    var width=Number(prompt("Enter a valid width"))
-    var height=Number(prompt("Enter a valid height"))
-    var x=Number(prompt("Enter a valid topLeft x"))
-    var y=Number(prompt("Enter a valid topLeft y"))
+    var width=Number(prompt("Enter a width value greater than 1"));
+    var height=Number(prompt("Enter a height value greater than 1"));
+    var x=Number(prompt("Enter a x-coordinate greater than 5"));
+    var y=Number(prompt("Enter a y-coordinate greater than 5"));
     if(width>=1 && height>=1 && x>=5 && y>=5 && canvas.width-x-width>=0 && canvas.height-y-height>=0){
       break;
     }
@@ -56,7 +56,7 @@ let canvas = document.getElementById('canvas2');
   ctx.strokeRect(x, y, width, height);
 
 }
- 
+
 /*
  * Color. 3 points.
  *
@@ -86,17 +86,17 @@ function drawColoredRectangle() {
  let canvas = document.getElementById("canvas3");
  let context = canvas.getContext("2d");
  context.clearRect(0, 0, canvas.width, canvas.height);
-	
+
  let color;
  while(true){
-   color=prompt("Please Enter a Valid Color")
+   color=prompt("Enter a color")
    if(color=="black" || color=="blue" || color=="green" || color=="orange" || color=="purple" || color=="red" || color=="yellow") {
      break;
    }
  }
  context.fillStyle=color;
  context.fillRect(10,10,100,50);
-	
+
 }
 
 /*
@@ -140,7 +140,7 @@ function drawTriangle() {
   while(true){
 	a=Number(prompt("Enter side 1 length"));
 	b=Number(prompt("Enter side 2 length"));
-	c=Number(prompt("Enter hypotenuse length"));
+	c=Number(prompt("Enter hypotenuse length (side 3)"));
 	if(((a**2) + (b**2) == (c**2)) && a>0 && b>0 && c>0 && canvas.width-x-a>=0 && canvas.height-y-b>=0){
 		break;
 	}else{
@@ -190,7 +190,7 @@ function drawSmileyFace() {
  let ctx = canvas.getContext('2d');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
 	while(true){
-		radius=Number(prompt("Please enter a good radius please"));
+		radius=Number(prompt("Enter a radius"));
 		if(radius>=1 && radius<=canvas.width && Number.isInteger(radius)){
 			break;
 		}
@@ -246,8 +246,8 @@ function drawStar() {
     let ctx = canvas.getContext('2d');
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      let outerRadius=Number(prompt("Enter a valid outer radius"));
-      let innerRadius=Number(prompt("Enter a valid inner radius"));
+      let outerRadius=Number(prompt("Enter a outer radius"));
+      let innerRadius=Number(prompt("Enter a inner radius"));
       if (outerRadius>=innerRadius && canvas.width>=outerRadius+125 && canvas.height>=outerRadius+125 && innerRadius>=1 && outerRadius>=1){
         let points=5;
         let outerx=[];
@@ -400,7 +400,7 @@ function drawHouse() {
 let canvas = document.getElementById('canvas9');
  let ctx = canvas.getContext('2d');
  ctx.clearRect(0, 0, canvas.width, canvas.height);
-	
+
  while(true){
  doorColor=prompt("Enter a color for the Door");
  houseColor=prompt("Enter a color for the House");
@@ -427,12 +427,10 @@ ctx.lineTo(x+286,150);
 ctx.lineTo(x+lengthHouse,y);
 ctx.lineTo(x,y);
 ctx.fill();
-ctx.fillStyle="#ADD8E6";	
+ctx.fillStyle="#ADD8E6";
 ctx.fillRect(300,y+100, 50, 50);
 ctx.fillRect(526,y+100, 50, 50);
 ctx.fillRect(300,y+200, 50, 50);
 ctx.fillRect(526,y+200, 50, 50);
 ctx.closePath();
 }
- 
-
